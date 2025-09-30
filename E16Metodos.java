@@ -7,7 +7,7 @@ class E16Metodos{
     static void escribir(String texto){
         for(char letra: texto.toCharArray()){
             if(this.nivelTinta > 0){
-            sop(letra)
+            System.out.println(letra);
             this.nivelTinta--;//this.nivelTinta = this.nivelTinta - 1;
             }
         }
