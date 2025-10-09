@@ -21,32 +21,53 @@ public class E16Metodos {
         */
         System.out.println("Por favor, ingresa la palabra que deseas escribir:");
         String palabra = palabraUser.nextLine();
-        
+        limpiarConsola();
         // El objeto marcador ahora se encarga de escribir por sí mismo
         System.out.println("\u001b[0m" + "\n--- Escribiendo con el marcador Rojo ---");
-        marcadorRojo.escribir(palabra,"\u001b[31m");
+        marcadorRojo.escribir(palabra);
         
         System.out.println("\u001b[0m" + "\n--- Escribiendo con el marcador Blanco ---");
-        marcadorBlanco.escribir(palabra,"\u001b[0m");
+        marcadorBlanco.escribir(palabra);
         
         System.out.println("\u001b[0m" + "\n--- Escribiendo con el marcador Verde ---");
-        marcadorVerde.escribir(palabra,"\u001b[32m");
+        marcadorVerde.escribir(palabra);
         
         System.out.println("\u001b[0m" + "\n--- Escribiendo con el marcador Azul ---");
-        marcadorAzul.escribir(palabra,"\u001b[34m");
+        marcadorAzul.escribir(palabra);
         
-        scanner.close();
+        palabraUser.close();
     }
+    public static void limpiarConsola() {  
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();  
+}  
 }
 
 class Marcador {
     String colorMarcador;
     short nivelTinta;
-
+    String codigoTinta;
     // Constructor con un parámetro para el color
     Marcador(String color) {
         this.nivelTinta = 100;
         this.colorMarcador = color;
+        switch(color){
+            case "Blanco":
+                this.codigoTinta = "\u001b[0m";
+                break;
+            case "Rojo":
+                this.codigoTinta = "\u001b[31m";
+                break;
+            case "Verde":
+                this.codigoTinta = "\u001b[32m";
+                break;
+            case "Azul":
+                this.codigoTinta = "\u001b[34m";
+                break;
+            default:
+                this.codigoTinta = "\u001b[0m";
+        }//fin de switch case
+
     }
 
     // Constructor por defecto
@@ -68,14 +89,13 @@ class Marcador {
         }
     }
 
-    public void escribir(String texto,String color) {
-        System.out.println("Escribiendo con un marcador de color: " + this.getColorMarcador() + "color");
+    public void escribir(String texto) {
+        System.out.println("Escribiendo con un marcador de color: " + this.getColorMarcador());
         for (char letra : texto.toCharArray()) {
             if (this.getNivelTinta() > 0) {
-                System.out.println(color + letra);
+                System.out.print(this.codigoTinta+letra);
                 this.decrementarNivelTinta();
             } else {
-                System.out.println("¡El marcador " + this.getColorMarcador() + " se ha quedado sin tinta!");
                 break;
             }
         }
