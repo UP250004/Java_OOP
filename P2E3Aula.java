@@ -15,10 +15,10 @@ class Alumno {
 class Asiento {
     boolean esDiestro;
     Alumno ocupante; // Referencia al alumno que ocupa este asiento
-
+    boolean ocupado;
     public Asiento(boolean esDiestro) {
         this.esDiestro = esDiestro;
-        this.ocupante = null; //Si no hay nadie dentro de esta madre
+        this.ocupado = false; //Si no hay nadie dentro de esta madre
     }
 }
 class Aula {
@@ -27,14 +27,27 @@ class Aula {
     int numero;
 
     Aula(int numero, int capacidadDiestros, int capacidadZurdos) {
-        this.numero = numero;
-        this.capacidad = capacidadDiestros + capacidadZurdos;
-        this.asientos = new Asiento[this.capacidad];
-        for (int i = 0; i < capacidadDiestros; i++) {
+        this.numero = numero;//Aula
+        this.capacidad = capacidadDiestros + capacidadZurdos;//Capacidad total del aula...
+        this.asientos = new Asiento[this.capacidad];//
+        int entrar(Alumno alumno){
+            for (Asiento asiento : this.asientos){
+                int numAlumnos = 0;
+                if (asiento.ocupante == alumno){
+                    asiento.ocupado = true;
+                }
+                if (asiento.ocupado){
+                    numAlumnos++;
+                }
+            }
+            for (int i = 0; i < capacidadDiestros; i++) {
             asientos[i] = new Asiento(true);
-        }
-        for (int i = capacidadDiestros; i < this.capacidad; i++) {
+            }   
+            for (int i = capacidadDiestros; i < this.capacidad; i++) {
             asientos[i] = new Asiento(false);
+            }
+
+
         }
     }
 
@@ -63,7 +76,9 @@ public class P2E3Aula {
             new Alumno("Raul Sayas", "UP25004", false),
             new Alumno("Rosa Sayas", "UP26987", true),
             new Alumno("Humberto Gomez", "UP21234", true),
-            new Alumno("Luz Díaz", "UP12346", false)
+            new Alumno("Luz Díaz", "UP12346", false).
+            new Alumno("Lumberto Gomez", "UP29834", true),
+            new Alumno("Luz Lizthbeth", "UP12456", false)
         };
         Aula aula604 = new Aula(604, 25, 15);
         Random aleatorio = new Random();
