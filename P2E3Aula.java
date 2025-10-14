@@ -65,7 +65,7 @@ public class P2E3Aula {
             new Alumno("Humberto Gomez", "UP21234", true),
             new Alumno("Luz Díaz", "UP12346", false)
         };
-        Aula aula101 = new Aula(604, 25, 15);
+        Aula aula604 = new Aula(604, 25, 15);
         Random aleatorio = new Random();
         System.out.println("--- Asignando asientos a los alumnos ---");
         for (Alumno alumno : listaAlumnos) {
