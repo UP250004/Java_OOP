@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+class P2E4ArrayList{
+    public static void main(String[] args){
+        int[] numerosPares = new int[4];
+        numerosPares[0] = 2;
+        numerosPares[1] = 4;
+        numerosPares[2] = 6;
+        numerosPares[3] = 8;
+        ArrayList<Integer> numerosParesV2 = new ArrayList<Integer>();//ArrayList no existe dentro de Java por default, debemos de implementar una librería, se debe de aplicar este metodo de esta manera...
+        numerosParesV2.add(2); //Recibe un parametro tipo "E", regresa un booleano... 
+        numerosParesV2.add(4);
+        numerosParesV2.add(6);
+        numerosParesV2.add(8);
+        numerosParesV2.add(10);///Estos métodos permiten meter una n cantidad de objetos en el Array
+        System.out.println(numerosParesV2.get(3));//Get: agarra un valor que se encuentre en la posicion marcada en el Array
+    }
+}
