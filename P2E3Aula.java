@@ -30,6 +30,7 @@ class Aula {
         this.numero = numero;//Aula
         this.capacidad = capacidadDiestros + capacidadZurdos;//Capacidad total del aula...
         this.asientos = new Asiento[this.capacidad];//
+        /*
         int entrar(Alumno alumno){
             for (Asiento asiento : this.asientos){
                 int numAlumnos = 0;
@@ -40,15 +41,13 @@ class Aula {
                     numAlumnos++;
                 }
             }
+        }*/
             for (int i = 0; i < capacidadDiestros; i++) {
-            asientos[i] = new Asiento(true);
+                asientos[i] = new Asiento(true);
             }   
             for (int i = capacidadDiestros; i < this.capacidad; i++) {
-            asientos[i] = new Asiento(false);
+                asientos[i] = new Asiento(false);
             }
-
-
-        }
     }
 
     public boolean sentarAlumno(Alumno alumno) {
@@ -76,7 +75,7 @@ public class P2E3Aula {
             new Alumno("Raul Sayas", "UP25004", false),
             new Alumno("Rosa Sayas", "UP26987", true),
             new Alumno("Humberto Gomez", "UP21234", true),
-            new Alumno("Luz Díaz", "UP12346", false).
+            new Alumno("Luz Díaz", "UP12346", false),
             new Alumno("Lumberto Gomez", "UP29834", true),
             new Alumno("Luz Lizthbeth", "UP12456", false)
         };
@@ -85,7 +84,7 @@ public class P2E3Aula {
         System.out.println("--- Asignando asientos a los alumnos ---");
         for (Alumno alumno : listaAlumnos) {
             if (aleatorio.nextDouble() < 0.5) { 
-                if (!aula101.sentarAlumno(alumno)) {
+                if (!aula604.sentarAlumno(alumno)) {
                     System.out.println(" " + alumno.nombre + " no pudo encontrar un asiento en el aula.");
                 }
             } else {
