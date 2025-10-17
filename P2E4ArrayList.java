@@ -13,5 +13,20 @@ class P2E4ArrayList{
         numerosParesV2.add(8);
         numerosParesV2.add(10);///Estos métodos permiten meter una n cantidad de objetos en el Array
         System.out.println(numerosParesV2.get(3));//Get: agarra un valor que se encuentre en la posicion marcada en el Array
+        
+        System.out.println("Tamaño del Array: " + numerosParesV2.size());
+        System.out.println("Se va a remover el 8 del arreglo... "+ numerosParesV2.get(3));
+        numerosParesV2.remove(3);
+        for (int e : numerosParesV2){
+            System.out.println(e);
+        }
+        System.out.println("Tamaño del Array: " + numerosParesV2.size());
+
+        int[] arregloExportado = numerosParesV2.toArray();
+        for (int a : arregloExportado){
+            System.out.println(a);
+        }
+        System.out.println("Tamaño del Array: " + arregloExportado.size());
     }
-}
+    }
+    
