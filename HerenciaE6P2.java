@@ -35,8 +35,8 @@ class Room extends Spaces{//para realizar la herencia "extends"
 
 class HerenciaE6P2 {
     public static void main(String ... args){
-        Person persona = new Person("Alejandro");
-        persona.name = "Brian";
+        Person persona1 = new Person("Alejandro");
+        persona1.name = "Brian";
         Room bedRoom = new Room(2.22f,3.52f,7.12f);
         bedRoom.door = 3;
         bedRoom.window = 4;
