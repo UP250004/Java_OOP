@@ -1,6 +1,5 @@
-package ejercicio_herencia;
 
-public class Perro {
+public class Perro extends Animal{
     String pelaje;
     int nivelOlfato;
     int nivelLadrido;

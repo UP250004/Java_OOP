@@ -1,4 +1,3 @@
-package ejercicio_herencia;
 
 public class Animal {
     int energia;
@@ -10,6 +9,9 @@ public class Animal {
 
     int comer(String tipoAlimento, float cantidad){
         this.saciedad = (int)cantidad;
+        if(tipoAlimento == "ScoobyGalletas"){
+            System.out.println("A Scooby Doo le gusta comer Scooby Galletas para ser valiente");
+        }
         return this.saciedad;
     }
 
