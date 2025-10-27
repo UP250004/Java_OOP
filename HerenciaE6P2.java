@@ -1,4 +1,4 @@
-class Spaces {
+class Spaces {//superclase
     float heigth;
     float large;
     float width;
@@ -25,7 +25,7 @@ class Person{
     }
 }
 
-class Room extends Spaces{//para realizar la herencia "extends"
+class Room extends Spaces{//para realizar la herencia "extends" // padre hijo o derivada
     int door;
     int window;
     Room(float x, float y, float z){
