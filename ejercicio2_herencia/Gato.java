@@ -4,8 +4,9 @@ public class Gato extends Mascota {
     }
     Gato(String nombreGato){
         super(nombreGato);
+        this.tirarCosas();
     }
-    void tirarCosas(){
+    private void tirarCosas(){
         System.out.println("Miau...");
         super.jugar();
     }
