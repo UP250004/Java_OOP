@@ -40,7 +40,7 @@ class HerenciaE6P2 {
         Room bedRoom = new Room(2.22f,3.52f,7.12f);
         bedRoom.door = 3;
         bedRoom.window = 4;
-        bedRoom.enter(persona.name);
+        bedRoom.enter(Persona.name);
         System.out.println("Las dimensiones de la habitación son:");
         System.out.println("Altura: " + bedRoom.heigth);
         System.out.println("Largo: " + bedRoom.large);
