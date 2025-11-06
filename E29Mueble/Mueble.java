@@ -4,10 +4,6 @@ public class Mueble {
     //ArrayList<Integer> numerosParesV2 = new ArrayList<>();//para hacer esto ocupas importar la libreria de ArrayList
     int[] dimensiones = new int[3];
     float precio;
-    //ancho 0
-    //largo 1
-    //grosor 2
-    //altura 3
     //Constructor
     Mueble(int ancho, int largo, int altura, float precio){
         this.dimensiones[0] = ancho;
