@@ -1,5 +1,23 @@
 import java.util.ArrayList;
 class P2E4ArrayList{
+    class Persona{
+        void saludar(){
+            System.out.println("Buenos días");
+        }
+    }
+
+    class Profesor extends Persona{
+        void saludar(){
+            System.out.println("Hola putos");
+            super.saludar();
+        }
+    }
+
+    public static void main(String ... args){
+        Profesor prof = new Profesor();
+        prof.saludar();
+    }
+    /* 
     public static void main(String[] args){
         int[] numerosPares = new int[4];
         numerosPares[0] = 2;
@@ -28,5 +46,6 @@ class P2E4ArrayList{
         }
         System.out.println("Tamaño del Array: " + arregloExportado.size());
     }
+        */
     }
     

@@ -70,7 +70,6 @@ class Estudiante {
 
 // Clase principal para gestionar la asistencia
 public class P2E2Estudiantes {
-
     public static void main(String[] args) {
         // Crear un array de estudiantes con un tamaño fijo
         Estudiante[] listaEstudiantes = new Estudiante[4];
