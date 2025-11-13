@@ -8,7 +8,7 @@ public class Silla extends Mueble{
         super(ancho, largo, altura, precio);
         this.nivelErgonomia = x;
         this.materialPrincipal = material;
-        System.err.println("El nivel de ergonomia actual es de " + this.nivelErgonomia + " y el material de la silla es de " + this.materialPrincipal);
+        System.out.println("El nivel de ergonomia actual es de " + this.nivelErgonomia + " y el material de la silla es de " + this.materialPrincipal);
     }
     //Metodos
     void sentarse(){
